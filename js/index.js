@@ -342,30 +342,30 @@ function convertTime(time24) {
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Swiper for vertical-forecast-container
     var verticalForecastSwiper = new Swiper('.vertical-forecast-container', {
-      direction: 'vertical',
-      slidesPerView: 'auto',
-      spaceBetween: 10,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-
-    // Initialize Swiper for weather-info
-    var weatherInfoSwiper = new Swiper('.weather-info', {
-      direction: 'vertical',
-      slidesPerView: 'auto',
-      allowSlidePrev: true,
-      allowSlideNext: true,
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
 
     // Initialize Swiper for swiper-container (assuming this is a different container)
     var dailySwiper = new Swiper('.day-swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 10,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
-  });
+
+    // Initialize Swiper for weather-info
+    var weatherInfoSwiper = new Swiper('.weather-info', {
+        direction: 'vertical',
+        slidesPerView: 3,
+        freeMode: true,
+
+    });
+});

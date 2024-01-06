@@ -160,7 +160,9 @@ body {
 .weather-info .swiper-wrapper{
     height: 150% !important;
 }
-
+.day-report .swiper-slide{
+    height: max-content;
+}
 
 
 @media only screen and (min-width: 992px) {

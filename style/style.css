@@ -104,6 +104,7 @@ body {
     text-align: center;
 }
 
+
 .details-card p,
 .details-card h2 {
     font-size: 1.6rem;
@@ -156,6 +157,11 @@ body {
     ;
 }
 
+.weather-info .swiper-wrapper{
+    height: 150% !important;
+}
+
+
 
 @media only screen and (min-width: 992px) {
 
@@ -175,14 +181,25 @@ body {
         font-size: 10;
     }
 
+    .temperature-container{
+        margin-top: 50%;
+    }
     .weather-card-inner {
         height: fit-content;
     }
+    
+.weather-info .swiper-wrapper{
+    height: 220% !important;
+}
 }
 
 @media only screen and (max-width: 768px) {
     html {
         font-size: 8px;
+    }
+
+    .weather-info .swiper-wrapper{
+        height: 250% !important;
     }
 
     body {
@@ -214,6 +231,9 @@ body {
         left: 0 !important;
     }
 
+    .weather-info .swiper-wrapper{
+        height: 220% !important;
+    }
     .weather-caption h1 {
         font-size: 4.5rem;
     }

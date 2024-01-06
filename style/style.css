@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Font definitions for special fonts used in the project */
+@font-face {
+    font-family: 'pacifico';
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'righteous';
+    src: url(../font/Righteous-Regular.ttf);
+}
+
+:root {
+    font-size: 12px;
+    /* Day Mode Colors */
+    --background-day: #87CEEB;
+    --right-background-day: var(--dynamic-weather-day);
+    /* Dynamic weather background color */
+    --text-day: #333333;
+    --divider-day: #7FB069;
+    --day-forecast-background: #3498DB;
+    --upcoming-days-background-day: #7FB069;
+
+    /* Night Mode Colors */
+    --background-night: #191970;
+    --right-background-night: var(--dynamic-weather-night);
+    /* Dynamic weather background color */
+    --text-night: #D3D3D3;
+    --divider-night: #696969;
+    --day-forecast-background-night: #2F4F4F;
+    --upcoming-days-background-night: #696969;
+
+    /* Dynamic Weather Background Colors (Adjust based on the current weather condition) */
+    --dynamic-weather-day: #FFD700;
+    /* Example: Clear/Sunny */
+    --dynamic-weather-night: #FFFF00;
+    /* Example: Clear/Starry Night */
+}
+
+body {
+    background-color: #e3e3e3;
+    background-blend-mode: overlay;
+
+}
+
+.weather-card-inner {
+    overflow: hidden;
+    background-blend-mode: overlay;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+/* Left part */
+.location-container h1,
+.location-container h3,
+.temperature-container,
+.day-report .swiper-slide,
+.current-week .swiper-slide,
+.details-card,
+.sun-card {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 4.5rem;
+}
+
+
+.location-container h3 {
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.current-day .row h2 {
+    width: fit-content;
+}
+
+.current-day h2 {
+    font-size: 3.5rem;
+}
+
+.temperature-container {
+    font-size: 1.5rem;
+    line-height: 0.5rem;
+    /* transform: translateY(100%); */
+}
+
+.temperature {
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+.time-info {
+    transform: translateY(-100%);
+}
+
+/* Right part */
+.weather-info {
+    padding: 1rem 1rem 1rem 2rem;
+    text-align: center;
+}
+
+.details-card p,
+.details-card h2 {
+    font-size: 1.6rem;
+}
+
+.day-report .swiper-slide,
+.current-week .swiper-slide,
+.weather-details,
+.sun-card {
+    width: fit-content;
+    background-color: #ffffff50;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.day-report .swiper-slide h2 {
+    font-size: 1.6rem;
+    font-weight: light;
+}
+
+.day-report .swiper-slide p {
+    font-size: 1.6rem;
+}
+
+.forecast-card p {
+    font-size: 1.8rem;
+}
+
+.forecast-card {
+    padding: 0 1rem;
+}
+
+.forecast-card p:first-child {
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.current-week img {
+    width: 10%;
+    transform: translateY(25%);
+}
+
+
+.btn-dark {
+    transform: translate(-10%, 25%);
+    ;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    /* .time-info{
+        transform: translateY(0);
+        text-align: start !important;
+        left: 0 !important;
+    } */
+    .weather-card-inner {
+        width: 75% !important;
+        height: 600px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    html {
+        font-size: 10;
+    }
+
+    .weather-card-inner {
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+
+    body {
+        backdrop-filter: blur(5px) !important;
+    }
+
+    .weather-card-inner {
+        width: 90% !important;
+    }
+
+    .current-day h2 {
+        font-size: 4rem;
+    }
+
+    .temperature-container {
+        line-height: normal;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .time-info {
+        position: relative !important;
+        transform: translateY(0);
+        text-align: start !important;
+        left: 0 !important;
+    }
+
+    .weather-caption h1 {
+        font-size: 4.5rem;
+    }
+
+    .weather-caption h2,
+    .weather-caption h3 {
+        font-size: 2rem;
+    }
+
+    .weather-caption img {
+        width: 25%;
+    }
+
+    .weather-caption p {
+        font-size: 1.2rem;
+        font-weight: lighter;
+    }
+
+    .weather-info {
+        padding: 0;
+    }
+
+    .current-week img {
+        width: 15%;
+    }
+
+    h2,
+    p {
+        font-size: 1.2rem !important;
+    }
+}

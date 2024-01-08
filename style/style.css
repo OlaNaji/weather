@@ -99,6 +99,11 @@ body {
 }
 
 /* Right part */
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 
 .details-card p,
 .details-card h2 {

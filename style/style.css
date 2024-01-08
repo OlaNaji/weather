@@ -99,9 +99,25 @@ body {
 }
 
 /* Right part */
-::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+/* Hide scrollbar for Firefox and Webkit browsers (Chrome, Safari) */
+.weather-info {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.weather-info::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+}
+
+.weather-info::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Hide scrollbar for Internet Explorer and Microsoft Edge */
+.weather-info {
+  -ms-overflow-style: none;
 }
 
 

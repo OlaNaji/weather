@@ -99,11 +99,6 @@ body {
 }
 
 /* Right part */
-.weather-info {
-    padding: 1rem 1rem 1rem 2rem;
-    text-align: center;
-}
-
 
 .details-card p,
 .details-card h2 {
@@ -157,12 +152,8 @@ body {
     ;
 }
 
-.weather-info .swiper-wrapper{
-    height: 150% !important;
-}
-.day-report .swiper-slide{
-    height: max-content;
-}
+
+
 
 
 @media only screen and (min-width: 992px) {
@@ -190,9 +181,6 @@ body {
         height: fit-content;
     }
     
-.weather-info .swiper-wrapper{
-    height: 220% !important;
-}
 }
 
 @media only screen and (max-width: 768px) {
@@ -200,9 +188,6 @@ body {
         font-size: 8px;
     }
 
-    .weather-info .swiper-wrapper{
-        height: 250% !important;
-    }
 
     body {
         backdrop-filter: blur(5px) !important;
@@ -234,7 +219,7 @@ body {
     }
 
     .weather-info .swiper-wrapper{
-        height: 220% !important;
+        height: 200% !important;
     }
     .weather-caption h1 {
         font-size: 4.5rem;

@@ -23,12 +23,11 @@
     <div class="search w-75 m-auto  position-relative">
       <input id="query" class=" form-control rounded-5 m-auto my-4 p-3  w-100" type="text"
         placeholder="enter city name, long & lat, or zipcode">
-      <button onclick="takeQuery()"
-        class="btn btn-dark rounded-5 position-absolute top-0 px-4 end-0">search</button>
+      <button onclick="takeQuery()" class="btn btn-dark rounded-5 position-absolute top-0 px-4 end-0">search</button>
     </div>
 
     <div class="weather-card-inner container row w-75 m-auto">
-      <div class="weather-caption col-lg-6 d-lg-flex flex-lg-column ">
+      <div class="weather-caption col-lg-6 d-lg-flex flex-lg-column justify-content-around">
         <div class="location-container mt-4 text-end ">
           <h1 class="location-name">Cairo</h1>
           <h3 class="location-info">Maadi</h3>
@@ -60,80 +59,74 @@
 
 
       <div class="col-lg-6 mt-md-4 ">
-        <div class="swiper weather-info ">
-          <div id="k" class="swiper-wrapper  ">
-            <!-- Add more swiper-slide elements for each day -->
-            <div class="swiper-slide w-100 h-auto">
-              <div id="weatherDetails" class="row weather-details w-100 my-4 m-auto">
-                <div class="col-4">
-                  <div class="details-card">
-                    <img class="w-50 " src="./icons/uv-index.svg" alt="">
-                    <h2>UV index</h2>
-                    <p class="uvIndex">low</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="details-card">
-                    <img class="w-50 " src="./icons/wind.svg" alt="">
-                    <h2>wind</h2>
-                    <p class="wind">0 km/h</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="details-card">
-                    <img class="w-50 " src="./icons/humidity.svg" alt="">
-                    <h2>humidity</h2>
-                    <p class="humidity">84%</p>
-                  </div>
-                </div>
+        <div class="weather-info h-100 overflow-y-auto pb-4 ">
+          <!-- Add more swiper-slide elements for each day -->
+          <div id="weatherDetails" class="row weather-details w-100 my-4 m-auto text-center  ">
+            <div class="col-4">
+              <div class="details-card">
+                <img class="w-50 " src="./icons/uv-index.svg" alt="">
+                <h2>UV index</h2>
+                <p class="uvIndex">low</p>
               </div>
             </div>
-
-            <div class="swiper-slide w-100 h-auto">
-              <div class="row day-report w-100  my-4 overflow-hidden">
-                <!-- Horizontal Carousel for Daily Forecast -->
-                <div class="swiper-container day-swiper">
-                  <div id="dailyReport" class="swiper-wrapper">
-                    <!-- Each card represents an hour's weather -->
-
-
-                    <!-- Add more swiper-slide elements for each hour -->
-                  </div>
-                </div>
+            <div class="col-4">
+              <div class="details-card">
+                <img class="w-50 " src="./icons/wind.svg" alt="">
+                <h2>wind</h2>
+                <p class="wind">0 km/h</p>
               </div>
             </div>
-
-
-            <div class="swiper-slide w-100 h-auto my-2 ">
-              <div class="row current-week overflow-hidden">
-                <!-- Vertical Carousel for 6-Day Forecast -->
-                <div class="swiper-container vertical-forecast-container">
-                  <div id="weeklyReport" class="swiper-wrapper">
-                    <!-- Add more swiper-slide elements for each day -->
-
-                  </div>
-                </div>
+            <div class="col-4">
+              <div class="details-card">
+                <img class="w-50 " src="./icons/humidity.svg" alt="">
+                <h2>humidity</h2>
+                <p class="humidity">84%</p>
               </div>
             </div>
+          </div>
+
+          <div class="row day-report w-100 my-4 overflow-hidden text-center ">
+            <!-- Horizontal Carousel for Daily Forecast -->
+            <div class="swiper-container day-swiper">
+              <div id="dailyReport" class="swiper-wrapper">
+                <!-- Each card represents an hour's weather -->
 
 
-            <div class="swiper-slide w-100  h-auto ">
-              <div class="row justify-content-evenly my-4  ">
-                <div class="sun-card w-25">
-                  <h2>sunrise</h2>
-                  <img src="./icons/sunrise.svg" class="w-50 " alt="">
-                  <p class="sunrise"></p>
-                </div>
-                <div class="sun-card w-25 ">
-                  <h2>sunset</h2>
-                  <img src="./icons/sunset.svg" class="w-50 " alt="">
-                  <p class="sunset"></p>
-                </div>
+                <!-- Add more swiper-slide elements for each hour -->
               </div>
+            </div>
+          </div>
+
+
+
+          <div class="row current-week overflow-hidden">
+            <!-- Vertical Carousel for 6-Day Forecast -->
+            <div class="swiper-container vertical-forecast-container">
+              <div id="weeklyReport" class="d-flex flex-column">
+                <!-- Add more swiper-slide elements for each day -->
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row justify-content-evenly my-4  text-center ">
+            <div class="sun-card w-25">
+              <h2>sunrise</h2>
+              <img src="./icons/sunrise.svg" class="w-50 " alt="">
+              <p class="sunrise"></p>
+            </div>
+            <div class="sun-card w-25 ">
+              <h2>sunset</h2>
+              <img src="./icons/sunset.svg" class="w-50 " alt="">
+              <p class="sunset"></p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   </main>
 

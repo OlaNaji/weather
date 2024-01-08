@@ -17,7 +17,7 @@ let sunset = document.querySelector('.sunset')
 
 queryInput = document.getElementById('query')
 
-//--------- API request ------------//
+// --------- API request ------------//
 function takeQuery() {
     let query = queryInput.value
     takeLocation(query)
@@ -59,6 +59,10 @@ function takeLocation(q) {
 }
 
 getLocation();
+
+
+weatherData = JSON.parse(localStorage.getItem('weatherData'))
+display(weatherData)
 //---------------------------------------------------------//
 
 function display(weatherData) {
@@ -112,8 +116,8 @@ function display(weatherData) {
         let icon = getCategoryPaths(condition, NaN).icon;
 
         weeklyReportText += `
-    <div class="swiper-slide w-100 h-auto">
-        <div class="forecast-card justify-content-BETWEEN d-flex align-items-baseline">
+    <div class="swiper-slide w-100 h-auto my-2">
+        <div class="forecast-card justify-content-between d-flex align-items-baseline">
             <p>${day}</p>
             <img src="${icon}" alt="">
             <p>${condition}</p>
@@ -341,15 +345,15 @@ function convertTime(time24) {
 //-------------Carousel initialisation ----------------//
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Swiper for vertical-forecast-container
-    var verticalForecastSwiper = new Swiper('.vertical-forecast-container', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        spaceBetween: 10,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
+    // var verticalForecastSwiper = new Swiper('.vertical-forecast-container', {
+    //     direction: 'vertical',
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 10,
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //     },
+    // });
 
     // Initialize Swiper for swiper-container (assuming this is a different container)
     var dailySwiper = new Swiper('.day-swiper', {
@@ -362,10 +366,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Initialize Swiper for weather-info
-    var weatherInfoSwiper = new Swiper('.weather-info', {
-        direction: 'vertical',
-        slidesPerView: 3,
-        freeMode: true,
+    // var weatherInfoSwiper = new Swiper('.weather-info', {
+    //     direction: 'vertical',
+    //     slidesPerView: 3,
+    //     freeMode: true,
 
-    });
+    // });
 });
